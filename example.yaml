@@ -1,0 +1,14 @@
+---
+
+- email: jimmy.juhl12@jmainguy.com
+  first: Jimmy
+  last: Juhl
+  groups:
+    - CokaCola
+    - MountainDew
+
+- email: jon@jmainguy.com
+  first: Jonathan
+  last: Mainguy
+  groups:
+    - Dominos
