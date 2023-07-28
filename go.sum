@@ -121,6 +121,7 @@ github.com/okta/okta-sdk-golang/v3 v3.0.2/go.mod h1:7fDqgCvPaxgjhYHaxRwvc6RMioVc
 github.com/okta/okta-sdk-golang/v3 v3.0.3/go.mod h1:7fDqgCvPaxgjhYHaxRwvc6RMioVcQ+XHN5a5hUe4nnw=
 github.com/okta/okta-sdk-golang/v3 v3.0.7/go.mod h1:7fDqgCvPaxgjhYHaxRwvc6RMioVcQ+XHN5a5hUe4nnw=
 github.com/okta/okta-sdk-golang/v3 v3.0.8/go.mod h1:DkHDygu91ODBfsx6jbAKfZQzln3VyKlhEX6+ItYlloI=
+github.com/okta/okta-sdk-golang/v3 v3.0.10/go.mod h1:cYdp2vJAjD803jMGxCJZXiOXBQcTBfOHwBOV6hXqfg0=
 github.com/patrickmn/go-cache v0.0.0-20180815053127-5633e0862627 h1:pSCLCl6joCFRnjpeojzOpEYs4q7Vditq8fySFG5ap3Y=
 github.com/patrickmn/go-cache v0.0.0-20180815053127-5633e0862627/go.mod h1:3Qf8kWWT7OJRJbdiICTKqZju1ZixQ/KpMGzzAfe6+WQ=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
@@ -134,6 +135,7 @@ github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
 github.com/stretchr/testify v1.5.1/go.mod h1:5W2xD1RspED5o8YsWQXVCued0rvSQ+mT+I5cxcmMvtA=
 github.com/stretchr/testify v1.6.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
+github.com/stretchr/testify v1.7.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/yuin/goldmark v1.1.25/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.27/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.32/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
