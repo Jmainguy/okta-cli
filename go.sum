@@ -124,6 +124,7 @@ github.com/okta/okta-sdk-golang/v3 v3.0.8/go.mod h1:DkHDygu91ODBfsx6jbAKfZQzln3V
 github.com/okta/okta-sdk-golang/v3 v3.0.10/go.mod h1:cYdp2vJAjD803jMGxCJZXiOXBQcTBfOHwBOV6hXqfg0=
 github.com/okta/okta-sdk-golang/v3 v3.0.11/go.mod h1:cYdp2vJAjD803jMGxCJZXiOXBQcTBfOHwBOV6hXqfg0=
 github.com/okta/okta-sdk-golang/v3 v3.0.12/go.mod h1:cYdp2vJAjD803jMGxCJZXiOXBQcTBfOHwBOV6hXqfg0=
+github.com/okta/okta-sdk-golang/v3 v3.0.13/go.mod h1:G9c5Rn6odsHI6XSC6PBa91Z5CicB8dv8zOfceeTRaWA=
 github.com/patrickmn/go-cache v0.0.0-20180815053127-5633e0862627 h1:pSCLCl6joCFRnjpeojzOpEYs4q7Vditq8fySFG5ap3Y=
 github.com/patrickmn/go-cache v0.0.0-20180815053127-5633e0862627/go.mod h1:3Qf8kWWT7OJRJbdiICTKqZju1ZixQ/KpMGzzAfe6+WQ=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
