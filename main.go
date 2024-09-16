@@ -5,13 +5,16 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"github.com/okta/okta-sdk-golang/okta"
-	"gopkg.in/yaml.v2"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"os"
 	"strings"
+
+	"github.com/okta/okta-sdk-golang/okta"
+	"golang.org/x/text/cases"
+	"golang.org/x/text/language"
+	"gopkg.in/yaml.v2"
 )
 
 func resetPasword(user *okta.User) {
@@ -92,7 +95,7 @@ func getUser(shortname string) (user *okta.User) {
 		fmt.Println(err)
 	}
 	defer resp.Body.Close()
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -111,11 +114,11 @@ func createUser(client *okta.Client, groupMap map[string]string, email, first, l
 		Password: p,
 	}
 	email = strings.ToLower(email)
-	first = strings.Title(first)
-	last = strings.Title(last)
+	caser := cases.Title(language.English)
+	first = caser.String(first)
+	last = caser.String(last)
 	username := strings.Split(email, "@")[0]
-	var login string
-	login = username + "@example.com"
+	login := username + "@example.com"
 	groups = append(groups, "Everyone")
 
 	profile := okta.UserProfile{}
@@ -167,7 +170,7 @@ func createUser(client *okta.Client, groupMap map[string]string, email, first, l
 		}
 	}
 	// Add to any remaining groups
-	for dg, _ := range desiredGroups {
+	for dg := range desiredGroups {
 		groupId := groupMap[dg]
 		_, err = client.Group.AddUserToGroup(groupId, user.Id)
 		if err != nil {
@@ -181,7 +184,7 @@ func createUser(client *okta.Client, groupMap map[string]string, email, first, l
 }
 
 func readPlay(filename string) (users oktaUsers) {
-	yamlFile, err := ioutil.ReadFile(filename)
+	yamlFile, err := os.ReadFile(filename)
 	if err != nil {
 		log.Printf("yamlFile.Get err   #%v ", err)
 	}

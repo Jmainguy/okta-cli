@@ -1,0 +1,54 @@
+version: 2
+project_name: okta-cli
+env:
+  - GO111MODULE=on
+before:
+  hooks:
+    # you may remove this if you don't use vgo
+    - go mod tidy
+builds:
+- env:
+  - CGO_ENABLED=0
+  goos:
+    - linux
+    - darwin
+    - windows
+  goarch:
+    - amd64
+    - arm64
+
+archives:
+  - name_template: >-
+      {{- .ProjectName }}_
+      {{- title .Os }}_
+      {{- if eq .Arch "amd64" }}x86_64
+      {{- else if eq .Arch "386" }}i386
+      {{- else }}{{ .Arch }}{{ end }}
+      {{- if .Arm }}v{{ .Arm }}{{ end -}}
+    format_overrides:
+      - goos: windows
+        format: zip
+
+nfpms:
+- homepage: https://github.com/Jmainguy/okta-cli
+  description: A golang binary to update Okta
+  maintainer: Jonathan Seth Mainguy <jon@soh.re>
+  license: GPLv2
+  vendor: Jmainguy
+  release: 1
+  overrides:
+      rpm:
+        file_name_template: "{{ .ProjectName }}-{{ .Version }}-{{.Release}}.{{ .Arch }}"
+  formats:
+  - deb
+  - rpm
+
+checksum:
+  name_template: 'checksums.txt'
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
