@@ -4,6 +4,7 @@ go 1.23.1
 
 require (
 	github.com/okta/okta-sdk-golang v1.1.0
+	github.com/okta/okta-sdk-golang/v5 v5.0.2
 	golang.org/x/text v0.18.0
 	gopkg.in/yaml.v2 v2.4.0
 )
